@@ -9,7 +9,10 @@
     <Import_RootNamespace>MemberDao</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IMemberDao.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InMemoryMemberDao.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Member.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MemberDaoException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SqlMemberDao.cs" />
   </ItemGroup>
 </Project>

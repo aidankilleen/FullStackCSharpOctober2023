@@ -1,16 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Text;
-using System.Xml.Linq;
+﻿using System.Data.SqlClient;
+
 
 namespace MemberDao
 {
-    public class SqlMemberDao
+    /// <summary>
+    /// Class <c>SqlMemberDao</c> used for reading and writing members to sql db
+    /// </summary>
+    /// <remarks>Make sure to call Close() when finished
+    /// Connection opened when constructor called
+    /// 
+    /// </remarks>
+    public class SqlMemberDao : IMemberDao
     {
         public string ConnectionString { get; set; } = "";
         private SqlConnection conn;
 
+        /// <summary>
+        /// Create <c>SqlMemberDao</c> Object
+        /// </summary>
+        /// <param name="connectionString">Connection String to connect to db</param>
         public SqlMemberDao(string connectionString)
         {
             ConnectionString = connectionString;
@@ -18,6 +26,9 @@ namespace MemberDao
             conn.Open();
         }
 
+        /// <summary>
+        /// Please call Close() when finished with dao
+        /// </summary>
         public void Close()
         {
             conn.Close();
@@ -41,8 +52,15 @@ namespace MemberDao
                     Email = email,
                     Active = active
                 };
+            } 
+            else
+            {
+                rdr.Close();
+                // throw an exception
+                throw new MemberDaoException($"Member {id} not found");
             }
             rdr.Close();
+            
             return m;
         }
         public List<Member> GetAll()
@@ -77,6 +95,12 @@ namespace MemberDao
             cmd.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Create a new member object in database
+        /// Id field is ignored and replaced with the newly created Id from the database
+        /// </summary>
+        /// <param name="member"></param>
+        /// <returns>Newly created Member with Id filled in</returns>
         public Member Add(Member member)
         {
             string sql = @$"INSERT INTO members 
