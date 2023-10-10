@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBHelloWorld", "DBHelloWorl
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MemberDao", "MemberDao\MemberDao.shproj", "{E803AA01-2D91-401E-BBF2-DCD9A744C4F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppHelloWorld", "WebAppHelloWorld\WebAppHelloWorld.csproj", "{66165CF6-01CE-41A4-A9B3-EE23C452AB20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{93135CFD-4211-4E95-90D0-03B62128A444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93135CFD-4211-4E95-90D0-03B62128A444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93135CFD-4211-4E95-90D0-03B62128A444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66165CF6-01CE-41A4-A9B3-EE23C452AB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66165CF6-01CE-41A4-A9B3-EE23C452AB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66165CF6-01CE-41A4-A9B3-EE23C452AB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66165CF6-01CE-41A4-A9B3-EE23C452AB20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		SolutionGuid = {4FA0E48B-CFCD-4DB5-BF4F-EE01D65FBF97}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MemberDao\MemberDao.projitems*{66165cf6-01ce-41a4-a9b3-ee23c452ab20}*SharedItemsImports = 5
 		MemberDao\MemberDao.projitems*{93135cfd-4211-4e95-90d0-03b62128a444}*SharedItemsImports = 5
 		MemberDao\MemberDao.projitems*{e803aa01-2d91-401e-bbf2-dcd9a744c4f8}*SharedItemsImports = 13
 	EndGlobalSection
