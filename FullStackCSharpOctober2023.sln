@@ -7,11 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopLevelStatementInvestigation", "TopLevelStatementInvestigation\TopLevelStatementInvestigation.csproj", "{0C736B5B-D7C0-4E68-A3F6-30B07AEA5A84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringInvestigation", "StringInvestigation\StringInvestigation.csproj", "{8BF5AC6A-253A-4469-9F15-F924B58D54A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringInvestigation", "StringInvestigation\StringInvestigation.csproj", "{8BF5AC6A-253A-4469-9F15-F924B58D54A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListInvestigation", "ListInvestigation\ListInvestigation.csproj", "{5ED31365-5EF0-4B86-911B-42221E987D5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListInvestigation", "ListInvestigation\ListInvestigation.csproj", "{5ED31365-5EF0-4B86-911B-42221E987D5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaInvestigation", "LambdaInvestigation\LambdaInvestigation.csproj", "{3D69457D-E868-47D6-9BF0-5A5DBCCB0B35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LambdaInvestigation", "LambdaInvestigation\LambdaInvestigation.csproj", "{3D69457D-E868-47D6-9BF0-5A5DBCCB0B35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrepDbCheck", "PrepDbCheck\PrepDbCheck.csproj", "{309BADCB-439D-44C2-8535-67C1B9D5C9A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBHelloWorld", "DBHelloWorld\DBHelloWorld.csproj", "{93135CFD-4211-4E95-90D0-03B62128A444}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MemberDao", "MemberDao\MemberDao.shproj", "{E803AA01-2D91-401E-BBF2-DCD9A744C4F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,11 +45,23 @@ Global
 		{3D69457D-E868-47D6-9BF0-5A5DBCCB0B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D69457D-E868-47D6-9BF0-5A5DBCCB0B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D69457D-E868-47D6-9BF0-5A5DBCCB0B35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309BADCB-439D-44C2-8535-67C1B9D5C9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309BADCB-439D-44C2-8535-67C1B9D5C9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309BADCB-439D-44C2-8535-67C1B9D5C9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309BADCB-439D-44C2-8535-67C1B9D5C9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93135CFD-4211-4E95-90D0-03B62128A444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93135CFD-4211-4E95-90D0-03B62128A444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93135CFD-4211-4E95-90D0-03B62128A444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93135CFD-4211-4E95-90D0-03B62128A444}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4FA0E48B-CFCD-4DB5-BF4F-EE01D65FBF97}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MemberDao\MemberDao.projitems*{93135cfd-4211-4e95-90d0-03b62128a444}*SharedItemsImports = 5
+		MemberDao\MemberDao.projitems*{e803aa01-2d91-401e-bbf2-dcd9a744c4f8}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
