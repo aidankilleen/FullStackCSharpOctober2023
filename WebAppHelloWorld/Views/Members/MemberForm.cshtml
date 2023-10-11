@@ -1,0 +1,35 @@
+﻿@model MemberDao.Member;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>@ViewBag.Title</h1>
+
+<form asp-action="@ViewBag.Action" method="POST">
+
+    <div class="form-group">
+        <label asp-for="Id" class="control-label"></label>
+        <input asp-for="Id" class="form-control" READONLY/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group form-check">
+        <label asp-for="Active" class="form-check-label">Active</label>
+        <input asp-for="Active" class="form-check-input" />
+    </div>
+    <input 
+        class="btn btn-success"
+        type="submit" 
+        name="submit"
+        value="@(ViewBag.Label)" />
+
+</form>
+

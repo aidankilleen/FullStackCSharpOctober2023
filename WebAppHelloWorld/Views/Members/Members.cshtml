@@ -1,0 +1,39 @@
+﻿@using MemberDao;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+
+}
+
+<h1>@ViewBag.Title</h1>
+
+
+
+
+@if(ViewBag.rv < 50)
+{
+    <h2>@ViewBag.rv Small Number</h2>
+} else
+{
+    <h2>@ViewBag.rv Large Number</h2>
+}
+
+
+<table class="table">
+    <thead></thead>
+    <tbody>
+@foreach (var member in ViewBag.Members)
+    {
+        <tr style="background-color:@(member.Active ? "lightgreen" : "white")">
+            <td>@member.Id</td>
+            <td>@member.Name</td>
+            <td>@member.Email</td>
+            <td>@(member.Active ? "Active" : "Inactive")</td>
+        </tr>
+        }
+
+    </tbody>
+</table>

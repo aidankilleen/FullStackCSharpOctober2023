@@ -1,7 +1,12 @@
+using MemberDao;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add a Member DAO to the items that are available via dependency injection
+builder.Services.AddScoped<IMemberDao, SqlMemberDao>();
 
 var app = builder.Build();
 
@@ -23,5 +28,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

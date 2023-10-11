@@ -19,7 +19,7 @@ namespace MemberDao
         /// Create <c>SqlMemberDao</c> Object
         /// </summary>
         /// <param name="connectionString">Connection String to connect to db</param>
-        public SqlMemberDao(string connectionString)
+        public SqlMemberDao(string connectionString = "Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=<>;Password=<>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;") 
         {
             ConnectionString = connectionString;
             conn = new SqlConnection(ConnectionString);
