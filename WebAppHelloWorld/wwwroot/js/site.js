@@ -2,3 +2,13 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+
+$(document).ready(() => {
+
+    $('#btnTest').on("click", () => {
+
+        alert("you clicked the button");
+    });
+
+});

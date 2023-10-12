@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>36362ad9-62f7-4bbf-b937-4eaf494c1f72</UserSecretsId>
+    <UserSecretsId>e5a9c5c5-44ec-41e3-a4af-c4fc84b61beb</UserSecretsId>
   </PropertyGroup>
 
   <Import Project="..\MemberDao\MemberDao.projitems" Label="Shared" />

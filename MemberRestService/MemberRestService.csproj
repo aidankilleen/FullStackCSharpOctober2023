@@ -4,13 +4,14 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>36362ad9-62f7-4bbf-b937-4eaf494c1f72</UserSecretsId>
+    <UserSecretsId>34bfa34f-064d-4ae2-a95d-3a34993d49d5</UserSecretsId>
   </PropertyGroup>
 
-  <Import Project="..\MemberDao\MemberDao.projitems" Label="Shared" />
-
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
+
+  <Import Project="..\MemberDao\MemberDao.projitems" Label="Shared" />
 
 </Project>

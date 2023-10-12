@@ -1,5 +1,8 @@
 using MemberDao;
 
+var builder = WebApplication.CreateBuilder(args);
+
+
 string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
 var configBuilder = new ConfigurationBuilder()
@@ -10,21 +13,12 @@ var configBuilder = new ConfigurationBuilder()
 
 var configuration = configBuilder.Build();
 
-string testValue = configuration.GetValue<string>("testvalue");
+var connectionString = configuration.GetConnectionString("default");
 
-string connectionString = configuration.GetConnectionString("devcon");
-
-
-var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-// Add a Member DAO to the items that are available via dependency injection
-//builder.Services.AddScoped<IMemberDao, SqlMemberDao>()
-// builder.Services.AddSingleton<IMemberDao>(new InMemoryMemberDao());
-builder.Services.AddSingleton<IMemberDao>(new SqlMemberDao(connectionString));
-
+builder.Services.AddSingleton<IMemberDao>(new InMemoryMemberDao());
 
 var app = builder.Build();
 
@@ -46,6 +40,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 
 app.Run();

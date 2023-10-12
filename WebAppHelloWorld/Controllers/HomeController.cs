@@ -9,18 +9,17 @@ namespace WebAppHelloWorld.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         //private IMemberDao dao = new InMemoryMemberDao();
-        string connectionString = "Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=ptdbuser;Password=Training2023#@!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        string connectionString = "Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=<>;Password=<>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         private IMemberDao dao;
 
-
-
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, 
+                                IMemberDao dao)
         {
             _logger = logger;
-
             _logger.LogInformation("****Testing the logger");
-            dao = new SqlMemberDao(connectionString);
+            this.dao = dao;
+            //dao = new SqlMemberDao(connectionString);
         }
 
         public IActionResult Index()
