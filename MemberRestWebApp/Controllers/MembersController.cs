@@ -55,9 +55,10 @@ namespace MemberRestWebApp.Controllers
 
         // DELETE api/<MembersController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int id)
         {
             _dao.Delete(id);
+            return Ok();
         }
     }
 }

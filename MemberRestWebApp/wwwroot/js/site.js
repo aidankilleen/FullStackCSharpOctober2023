@@ -5,18 +5,31 @@
 
 url = "/api/Members";
 
+function onDelete(id) {
+    if (confirm(`Are you sure you want to delete ${id}`)) {
+        $.ajax({
+            url: `/api/Members/${id}`, 
+            method: "delete", 
+            success: () => {
+                $(`#tr_${ id }`).remove();
+            }, 
+            error: (error) => {
+                alert("error:" + error);
+            }
+        });
+    }
+}
 $(document).ready(() => {
-
     $.getJSON(url, (members) => {
-
         members.forEach(member => {
 
             $('#tblMembers tbody')
-                .append(`<tr>
+                .append(`<tr id="tr_${ member.id }">
                     <td>${member.id}</td>
                     <td>${member.name}</td>
                     <td>${member.email}</td>
                     <td>${member.active ? "Active" : "Inactive"}</td>
+                    <td><button onclick="onDelete(${member.id})" class="btn btn-danger">Delete</button></td>
                 </tr>`);
         })
     })
