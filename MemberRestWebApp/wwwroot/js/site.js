@@ -19,7 +19,6 @@ $(document).ready(() => {
                     <td>${member.active ? "Active" : "Inactive"}</td>
                 </tr>`);
         })
-        
     })
 });
 
