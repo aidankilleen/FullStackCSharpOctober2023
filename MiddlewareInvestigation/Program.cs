@@ -1,25 +1,9 @@
-using MemberDao;
+using MiddlewareInvestigation.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-
-var configBuilder = new ConfigurationBuilder()
-    .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-    .AddJsonFile("appsettings.json")
-    .AddJsonFile($"appsettings.{environment}.json", true)
-    .AddUserSecrets<Program>();
-
-var configuration = configBuilder.Build();
-
-var connectionString = configuration.GetConnectionString("default");
-
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//builder.Services.AddSingleton<IMemberDao>(new InMemoryMemberDao());
-builder.Services.AddSingleton<IMemberDao>(new EntityFrameworkMemberDao(connectionString));
 
 var app = builder.Build();
 
@@ -31,12 +15,39 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Middleware
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
+
+app.UseABTesting();
+
+/*
+app.Use(async (context, next) =>
+{
+    string path = context.Request.Path;
+
+    if (path.StartsWith("/Marketing/Index"))
+    {
+        Random rg = new Random();
+        int r = rg.Next(100);
+        if (r < 50)
+        {
+            context.Response.Redirect("/Marketing/Message1");
+        } else
+        {
+            context.Response.Redirect("/Marketing/Message2");
+        }
+        await next();
+    } else
+    {
+        await next();
+    }
+});
+*/
+
 
 app.MapControllerRoute(
     name: "default",
