@@ -5,7 +5,7 @@ Console.WriteLine("EF Investigation");
 
 
 
-using (var db = new MemberDbContext("Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=ptdbuser;Password=Training2023#@!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+using (var db = new MemberDbContext("Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=<>;Password=<>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
 {
     var members = db.Members.Where(m => m.Active).OrderBy(m => m.Name).ToList();
 

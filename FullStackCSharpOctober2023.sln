@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFInvestigation", "EFInvest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkInvestigation", "EntityFrameworkInvestigation\EntityFrameworkInvestigation.csproj", "{39F76A20-9117-46A7-8EDB-4AEFD159F969}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFirstEntityFrameworkInvestigation", "DataFirstEntityFrameworkInvestigation\DataFirstEntityFrameworkInvestigation.csproj", "{4F31F135-6CE6-4BB8-9AF1-83C1330C7771}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{39F76A20-9117-46A7-8EDB-4AEFD159F969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39F76A20-9117-46A7-8EDB-4AEFD159F969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F76A20-9117-46A7-8EDB-4AEFD159F969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F31F135-6CE6-4BB8-9AF1-83C1330C7771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F31F135-6CE6-4BB8-9AF1-83C1330C7771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F31F135-6CE6-4BB8-9AF1-83C1330C7771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F31F135-6CE6-4BB8-9AF1-83C1330C7771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
