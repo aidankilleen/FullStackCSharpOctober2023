@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberRestService", "Member
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberRestWebApp", "MemberRestWebApp\MemberRestWebApp.csproj", "{FB5D0F46-2BE3-40FF-85C6-AF95E1832F61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrepEFHW2", "PrepEFHW2\PrepEFHW2.csproj", "{693A2E8F-C569-4394-A8CE-AFA3989E006C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralCSharpInvestigation", "GeneralCSharpInvestigation\GeneralCSharpInvestigation.csproj", "{E0917BDE-2841-49E3-BF8E-F1E15C987194}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsycAwaitInvestigation", "AsycAwaitInvestigation\AsycAwaitInvestigation.csproj", "{8E913192-0272-443E-B237-100D57FD7F69}"
@@ -79,10 +77,6 @@ Global
 		{FB5D0F46-2BE3-40FF-85C6-AF95E1832F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB5D0F46-2BE3-40FF-85C6-AF95E1832F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB5D0F46-2BE3-40FF-85C6-AF95E1832F61}.Release|Any CPU.Build.0 = Release|Any CPU
-		{693A2E8F-C569-4394-A8CE-AFA3989E006C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{693A2E8F-C569-4394-A8CE-AFA3989E006C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{693A2E8F-C569-4394-A8CE-AFA3989E006C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{693A2E8F-C569-4394-A8CE-AFA3989E006C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0917BDE-2841-49E3-BF8E-F1E15C987194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0917BDE-2841-49E3-BF8E-F1E15C987194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0917BDE-2841-49E3-BF8E-F1E15C987194}.Release|Any CPU.ActiveCfg = Release|Any CPU
